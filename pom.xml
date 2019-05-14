@@ -5,14 +5,15 @@
 	<groupId>org.matsim.vsp</groupId>
 	<artifactId>vsp-playgrounds</artifactId>
 	<packaging>pom</packaging>
-	<version>12.0-SNAPSHOT</version>
+	<version>${matsim.version}</version>
 	<name>VSP-Playgrounds</name>
 
-	<scm>
-		<url>https://github.com/matsim-vsp/vsp-playgrounds.git</url>
-		<connection>scm:git:git://github.com/matsim-vsp/vsp-playgrounds.git</connection>
-		<developerConnection>scm:git:git@github.com:matsim-vsp/vsp-playgrounds.git</developerConnection>
-	</scm>
+	<properties>
+
+		<!-- for the weekly release: matsim.version>12.0-2019w19-20190513.010711-1</matsim.version-->
+		<matsim.version>12.0-2019w19-20190513.010711-1</matsim.version>
+	</properties>
+	
 	<repositories>
 	<repository>
 			<id>matsim</id>
@@ -48,13 +49,7 @@
 
 	</repositories>
 	<build>
-		<extensions>
-			<extension>
-				<groupId>io.packagecloud.maven.wagon</groupId>
-				<artifactId>maven-packagecloud-wagon</artifactId>
-				<version>0.0.6</version>
-			</extension>
-		</extensions>
+		
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -138,24 +133,11 @@
 	</build>
 
 	<modules>
-		<module>agarwalamit</module>
-		<module>benjamin</module>
-		<module>dgrether</module>
-		<module>dziemke</module>
-		<module>gleich</module>
-		<module>gunnar</module>
-		<module>ikaddoura</module>
+		
 		<module>jbischoff</module>
-		<module>kai</module>
-		<module>kairuns</module>
-		<module>kturner</module>
 		<module>michalm</module>
-		<module>santiago</module>
-		<module>stockholm</module>
-		<module>tthunig</module>
 		<module>vsp</module>
-		<module>vspshk</module>
-		<module>vsptelematics</module>
+		
 	</modules>
 
 	<dependencies>
@@ -169,21 +151,21 @@
 		<dependency>
 			<groupId>org.matsim</groupId>
 			<artifactId>matsim</artifactId>
-			<version>12.0-SNAPSHOT</version>
+			<version>${matsim.version}</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.matsim</groupId>
 			<artifactId>matsim</artifactId>
-			<version>12.0-SNAPSHOT</version>
+			<version>${matsim.version}</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.matsim</groupId>
 			<artifactId>matsim-examples</artifactId>
-			<version>12.0-SNAPSHOT</version>
+			<version>${matsim.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
